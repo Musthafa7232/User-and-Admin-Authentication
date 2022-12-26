@@ -1,0 +1,39 @@
+.sign {
+    letter-spacing: 1px;
+}
+
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    .form-card {
+        -webkit-backdrop-filter: blur(15px);
+        backdrop-filter: blur(15px);
+        background-color: rgba(55, 54, 54, 0.3);
+        
+    }
+
+    body {
+        background-image: url("low-poly-grid-haikei.svg");
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        backdrop-filter: blur(4px);
+        backdrop-filter: grayscale(50%);
+    }
+
+}
+
+.input-control input:focus{
+outline: 0 !important;
+}
+
+.input-control.success input{
+    border: colour #09c372!important;
+}
+.input-control.error input{
+    border-color: #ff3860!important;
+}
+.input-control .error {
+    color: #ff3860!important;
+    height: 20px;
+    font-size: 13px;
+
+}

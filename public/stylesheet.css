@@ -1,0 +1,36 @@
+.sign{
+    letter-spacing: 1px;
+}
+ 
+ @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    .form-card {
+      -webkit-backdrop-filter: blur(15px);
+      backdrop-filter: blur(15px);
+      background-color: rgba(240, 241, 244, 0.3)!important;  
+    }
+    body{
+        margin: 0px;
+      background-image: url("stacked-peaks-haikei.svg");
+      height: 100vh;
+      background-repeat: no-repeat;
+      background-size: cover;
+      backdrop-filter: blur(4px);
+      backdrop-filter: grayscale(50%);
+ }
+}
+  .input-control input:focus{
+    outline: 0 !important;
+    }
+    
+    .input-control.success input{
+        border-color : solid 3px#09c372!important;
+    }
+    .input-control.error input{
+        border-color: 3px solid #ff3860!important;
+    }
+    .input-control .error {
+        color: #ff3860!important;
+        height: 20px;
+        font-size: 13px;
+    
+    }

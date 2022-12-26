@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include ('../partials/adminheader.ejs') %>
+
+    <body>
+        <%- include ('../partials/adminnav.ejs') %>
+        
+           <section class="container-fluid ">
+                <table class="table table-primary table-striped  mt-5  ">
+                    <thead class="mt-5 pt-5">
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Password</th>
+                            <th scope="col">Email</th>
+                            <th></th>
+                    </thead>
+                    </tr>
+                    <% if (users.length>0){ %>
+                        <% users.forEach(data=>{ %>
+                            <tbody class="mt-1">
+                                <tr>
+
+                                    <td id="name">
+                                        <%=data.name %>
+                                    </td>
+                                    <td id="password">
+                                        <%= data.password %>
+                                    </td>
+                                    <td id="email">
+                                        <%= data.email %>
+                                    </td>
+                                    <td>
+                                        <a href="/admin/edit/<%= data._id %>"> <button
+                                                class="btn btn-outline-dark b-flex justify-content-end">Edit</button></a>
+                                        
+                                            </td>
+                            </tbody>
+                            </tr>
+                            <% }) %>
+                                <% }else{ %>
+                                    <div class="col-md-12 text-center text-white ">
+                                        <h5 class="mt-5">No User Datas</h5>
+                                    </div>
+                                    <% } %>
+                </table>
+            </section>
+            <script src="/scripts/admin-script.js"></script>
+            
+    </body>
+
+</html>

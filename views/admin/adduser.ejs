@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include ('../partials/adminheader.ejs') %>
+
+    <body>
+        <%- include ('../partials/adminnav.ejs') %>
+            
+          <section class="vh-100 mt-5">
+                <div class="container  h-100 ">
+                    <div class="row d-flex justify-content-center align-items-center h-100">
+                        <div class="col col-xl-10 d-flex align-items-center">
+                            <div class="card form-card  m-auto p-auto" style="border-radius: 1rem;">
+                                <div class="row g-0">
+        
+                                    <div class=" d-flex align-items-center mt-2">
+                                        <div class="card-body  p-lg-5 text-light ">
+        
+                                            <form id="form" action='/admin/adduser' method='POST'>
+        
+                                                <h5 class="fw-bold mb-3 pb-3 sign">Add User</h5>
+                                              
+                                                <span class=" text-end text-danger fw-bold">  <%= message %> </span>
+                                                <div class="form-outline input-control mb-4 ">
+                                                    <input type="text" id="name"
+                                                        class="form-control form-control-lg " name="username" id="name"  onfocusout="validateName()"/>
+                                                    <label class="form-label" for="form2Example17" >Enter a Username</label>
+                                                    <div class="error"></div>
+                                                </div>
+                                                <div class="form-outline input-control mb-4 ">
+                                                    <input type="text" id="email"
+                                                        class="form-control form-control-lg " name="email" id="email"  onfocusout="validateEmail()"/>
+                                                    <label class="form-label" for="form2Example17">Enter an Email </label>
+                                                    <div class="error"></div>
+                                                </div>
+        
+        
+                                                <div class="form-outline input-control mb-4 ">
+                                                    <input type="password" id="password"
+                                                        class="form-control form-control-lg" name="password" onfocusout="validatePassword()"/>
+                                                    <label class="form-label" for="form2Example27">Enter a Password</label>
+                                                    <div class="error"></div>
+                                                </div>
+                                                <div class="form-outline input-control mb-4 ">
+                                                    <input type="password" id="password2"
+                                                        class="form-control form-control-lg"  onfocusout="validatePassword2()"/>
+                                                    <label class="form-label" for="form2Example27"> Confirm Your Password</label>
+                                                    <div class="error"></div>
+                                                </div>
+                                               
+                                                    <button class="btn btn-success btn-lg btn-block" type="submit" onclick="validateAddUser()">Submit</button>
+                                               
+        
+                                                <a href="#!" class="small text-muted">Terms of use.</a>
+                                                <a href="#!" class="small text-muted">Privacy policy</a>
+                                            </form>
+        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <script src="/scripts/admin-script.js"></script> 
+           
+    </body>
+
+</html>
